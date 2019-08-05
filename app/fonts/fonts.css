@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.ttf');
+    src: local('OpenSans-Regular'),
+        url('OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Bold.ttf');
+    src: local('OpenSans-Bold'),
+        url('OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Light.ttf');
+    src: local('OpenSans-Light'),
+        url('OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Regular.otf');
+    src: local('Qanelas-Regular'),
+        url('Qanelas-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Bold.otf');
+    src: local('Qanelas-Bold'),
+        url('Qanelas-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Light.otf');
+    src: local('Qanelas-Light'),
+        url('Qanelas-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Medium.otf');
+    src: local('Qanelas-Medium'),
+        url('Qanelas-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Thin.otf');
+    src: local('Qanelas-Thin'),
+        url('Qanelas-Thin.otf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-SemiBold.otf');
+    src: local('Qanelas-SemiBold'),
+        url('Qanelas-SemiBold.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-ExtraBold.otf');
+    src: local('Qanelas-ExtraBold'),
+        url('Qanelas-ExtraBold.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    src: url('Qanelas-Heavy.otf');
+    src: local('Qanelas-Heavy'),
+        url('Qanelas-Heavy.otf');
+    font-weight: 1000;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerExtraBoldDEMO.ttf');
+    src: local('MullerExtraBoldDEMO'),
+        url('MullerExtraBoldDEMO.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('Rubik-Bold.ttf');
+    src: local('Rubik-Bold'),
+        url('Rubik-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}

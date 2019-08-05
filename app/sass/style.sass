@@ -1,0 +1,1228 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+  background: #232227
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+input, button, textarea
+  outline: none !important
+
+.stripes-wrapper
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 1
+  .stripes
+    max-width: 1140px !important
+    margin: 0 auto
+    width: 100%
+    display: flex
+    justify-content: space-between
+    .stripes-item
+      display: block
+      min-height: 140em
+      width: 1px
+      background: #3f3e43
+      &:first-child
+        background: #2b2a2f
+
+.container
+  max-width: 1440px !important
+
+
+/* magnific popup animation START */
+.mfp-fade.mfp-bg 
+  opacity: 0
+  -webkit-transition: all 0.5s ease-out
+  -moz-transition: all 0.5s ease-out
+  transition: all 0.5s ease-out
+
+
+.mfp-fade.mfp-bg.mfp-ready 
+  opacity: 0.8
+
+
+.mfp-fade.mfp-bg.mfp-removing 
+  opacity: 0
+
+
+.mfp-fade.mfp-wrap .mfp-content 
+  opacity: 0
+  -webkit-transition: all 0.15s ease-out
+  -moz-transition: all 0.15s ease-out
+  transition: all 0.15s ease-out
+
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+  opacity: 1
+
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+  opacity: 0
+/* magnific popup animation END */
+
+.header-nav
+  background: #232227
+  color: rgba(255, 255, 255, 0.25)
+  font-family: 'Evolventa'
+  font-size: 1.3rem
+  line-height: 1.846
+  padding: 6rem 0
+  height: 100%
+  width: 280px
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 9999
+  overflow-y: auto
+  overflow-x: hidden
+  -webkit-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
+  -webkit-transform: translateZ(0)
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateX(100%)
+  -ms-transform: translateX(100%)
+  transform: translateX(100%)
+  visibility: hidden
+
+.header-nav__close
+  display: block
+  height: 30px
+  width: 30px
+  -webkit-border-radius: 3px
+    border-radius: 3px
+  background-color: #fff
+  position: absolute
+  top: 36px
+  right: 30px
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+  z-index: 800
+
+.header-nav__close span::before,
+.header-nav__close span::after
+  content: ""
+  display: block
+  height: 2px
+  width: 12px
+  background-color: #2c2c40
+  position: absolute
+  top: 50%
+  left: 9px
+  margin-top: -1px
+
+.header-nav__close span::before
+  -webkit-transform: rotate(-45deg)
+  -ms-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+
+.header-nav__close span::after
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+/* menu is open
+ * ----------------------------------------------- */
+.menu-is-open .header-nav
+  -webkit-transform: translateX(0)
+  -ms-transform: translateX(0)
+  transform: translateX(0)
+  visibility: visible
+  -webkit-overflow-scrolling: touch
+
+.menu-is-open .header-nav .header-nav__content
+  opacity: 1
+  visibility: visible
+  -webkit-transition-property: all
+  -o-transition-property: all
+  transition-property: all
+  -webkit-transition-duration: 0.5s
+  -o-transition-duration: 0.5s
+    transition-duration: 0.5s
+  -webkit-transition-timing-function: ease-in-out
+  -o-transition-timing-function: ease-in-out
+    transition-timing-function: ease-in-out
+  -webkit-transition-delay: 0.3s
+  -o-transition-delay: 0.3s
+    transition-delay: 0.3s
+  left: 0
+
+/* -------------------------------------------------------------------
+ * ## mobile menu toggle
+ * ------------------------------------------------------------------- */
+.header-menu-toggle
+  display: none
+  right: 40px
+  top: 6%
+  position: absolute
+  height: 42px
+  width: 42px
+  line-height: 42px
+  padding: 1.1rem
+  font-family: 'Evolventa'
+  font-size: 1.3rem
+  text-transform: uppercase
+  letter-spacing: .3rem
+  color: #f4cb03 !important
+  -webkit-transition: all 0.5s ease-in-out
+  -o-transition: all 0.5s ease-in-out
+  transition: all 0.5s ease-in-out
+  z-index: 9999
+
+.header-menu-toggle.top
+  top: 16px
+
+.header-menu-toggle.opaque
+  background-color: #000000
+
+.header-menu-toggle.opaque .header-menu-text
+  background-color: #000000
+
+.header-menu-toggle:hover, .header-menu-toggle:focus
+  color: #8cc541
+
+.header-menu-text
+  display: block
+  position: absolute
+  top: 0
+  left: -70px
+  width: 70px
+  padding-left: 12px
+
+.header-menu-icon
+  display: block
+  width: 35px
+  height: 4px
+  margin-top: -1px
+  left: 10px
+  top: 50%
+  right: auto
+  bottom: auto
+  background-color: #f59324 !important
+  -webkit-transition: all 0.5s ease-in-out
+  -o-transition: all 0.5s ease-in-out
+  transition: all 0.5s ease-in-out
+
+.header-menu-icon::before, .header-menu-icon::after
+  content: ''
+  width: 100%
+  height: 100%
+  background-color: #8cc541 !important
+  left: 0
+  -webkit-transition: all 0.5s ease-in-out
+  -o-transition: all 0.5s ease-in-out
+  transition: all 0.5s ease-in-out
+
+.header-nav__content ul
+  padding-left: 0
+  margin-bottom: 0
+
+.header-nav__content ul li
+  border-bottom: 3px solid #fff
+  padding-top: 3px
+  text-align: center
+  a
+    color: #fff
+    font-family: 'Qanelas'
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 0.875em
+  &:hover
+    background: #fff
+    a
+      color: #000
+  &:first-child
+    border-top: 3px solid #fff
+
+.header
+  position: relative
+  z-index: 2
+  background: url('../images/header-pattern-dots.png')
+  background-position: top
+  background-repeat: no-repeat
+  background-size: cover
+  overflow: hidden
+  .header-container
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 100vh
+    .request-btn-wrap
+      position: fixed
+      right: 1em
+      bottom: 1em
+      border: 1px solid #fff
+      border-radius: 50%
+      overflow: hidden
+      padding: 15px
+      .request-tel-btn
+        background: none
+        border: 0
+        border-radius: 50%
+        padding: 0
+        cursor: pointer
+        img
+          width: 100%
+          border-radius: 50%
+          margin-bottom: -5px
+          animation: pulse_animation 1.3s infinite
+    .header-top
+      padding-top: 3.125em
+      display: flex
+      justify-content: space-between
+      max-width: 1410px
+      width: 100%
+      position: absolute
+      left: 15px
+      top: 0
+      .logo
+        display: block
+        position: relative
+        img
+          position: relative
+          z-index: 4
+          padding: 1em 0
+          background: #232227
+        .logo-line
+          display: block
+          position: absolute
+          width: 2px
+          height: 26.25em
+          background: #ef9024
+          z-index: 3
+          left: 4em
+          top: -3em
+      .header-nav-menu
+        display: flex
+        justify-content: space-between
+        width: 100%
+        max-width: 73em
+        li
+          text-align: center
+          width: 20%
+          padding-top: 2em
+          position: relative
+          &::before
+            content: ''
+            position: absolute
+            left: 50%
+            top: 0
+            display: block
+            width: 3px
+            height: 20px
+            background: #d8d8d9
+          &:nth-child(1)
+            &::before
+              left: 51.5%
+          &:nth-child(2)
+            &::before
+              left: 49.5%
+          &:nth-child(3)
+            padding-right: 1em
+            &::before
+              left: 46.5%
+          &:nth-child(4)
+            padding-right: 1.8em
+            &::before
+              left: 44%
+          &:nth-child(5)
+            padding-right: 2em
+            &::before
+              left: 42%
+          a
+            font-family: 'Qanelas'
+            font-weight: 400
+            font-size: 1.25em
+            color: #f9f9f9
+            &:hover
+              color: #f59324
+              text-decoration: none
+    .header-middle
+      padding-top: 8em
+      .header-circle
+        max-width: 40em
+        width: 100%
+        min-height: 40em
+        margin: 0 auto
+        background: rgba(245, 147, 36, 0.1)
+        border-radius: 50%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+        z-index: 2
+        h3
+          position: absolute
+          color: #fff
+          top: 25%
+          font-family: 'Qanelas'
+          font-weight: 900
+          text-shadow: 0px 0px 29px rgba(0, 0, 0, 0.21)
+          font-size: 3em
+          text-transform: uppercase
+          z-index: 4
+          left: -22%
+          &::before
+            content: ''
+            position: absolute
+            width: 1.5em
+            height: 10px
+            background: #fff
+            bottom: -0.4em
+            left: 2.5em
+          span
+            font-size: 1.4em
+        .request-btn
+          position: absolute
+          max-width: 16em
+          width: 100%
+          font-family: 'Qanelas'
+          font-weight: 700
+          color: #fff
+          font-size: 1em
+          padding: 1.2em 0
+          z-index: 4
+          letter-spacing: 3px
+          border-radius: 15px
+          border: 0
+          bottom: 34%
+          left: -6%
+          background: #8ed83e
+          cursor: pointer
+          box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.21)
+          &:hover
+            transition: .3s ease-in-out
+            background: #fff
+            color: #8ed83e
+        .main-img
+          position: absolute
+          bottom: 0
+          right: 0
+          z-index: 4
+          max-width: 60%
+          width: 100%
+        .prom-it
+          position: absolute
+          right: -50%
+          font-size: 7em
+          color: #fff
+          font-family: 'Qanelas'
+          font-weight: 1000
+          z-index: 1
+          color: #26252a
+          transform: rotate(90deg)
+        .inner-circle
+          max-width: 28em
+          width: 100%
+          min-height: 28em
+          margin: 0 auto
+          border-radius: 50%
+          background: #f59324
+          position: relative
+          z-index: 3
+          display: flex
+          flex-direction: column
+          justify-content: center
+          p
+            font-family: 'Qanelas'
+            font-weight: 400
+            font-size: 1.125em
+            padding-left: 1em
+            line-height: 1.2em
+            padding-bottom: 3em
+
+.about-company
+  padding: 5em 0
+  position: relative
+  overflow: hidden
+  z-index: 3
+  .title
+    position: relative
+    height: 2em
+    h3
+      color: #fff
+      font-family: 'Qanelas'
+      font-weight: 700
+      font-size: 1.5em
+      padding-left: 1em
+      border-left: 3px solid #dcdcdd
+      position: absolute
+      left: 26%
+  .about-wrapper
+    padding-top: 3em
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    .leftside
+      width: 55%
+      min-height: 20em
+      display: flex
+      flex-direction: column
+      justify-content: center
+      .why-us
+        background: #f59324
+        font-size: 1em
+        font-family: 'Qanelas'
+        font-weight: 700
+        padding: 2px
+        margin-left: 4em
+        color: #232227
+        display: inline-block
+        max-width: 11em
+      .desctiption
+        margin-top: 1.5em
+        padding-left: 4em
+        border-left: 6px solid #f59324
+        p
+          color: #fff
+          margin-top: 1.5em
+          font-family: 'Qanelas'
+          font-weight: 400
+          font-size: 1em
+          line-height: 1.5em
+          color: #f9f9f9
+          span
+            font-weight: 700
+    .rightside
+      width: 45%
+      .circle-img
+        max-width: 25em
+        width: 100%
+        min-height: 25em
+        border-radius: 50%
+        border: 3em solid #f59324
+        margin: 0 auto
+        position: relative
+        img
+          position: absolute
+          max-width: 24em
+          right: 5%
+          top: 8%
+
+.our-team
+  position: relative
+  z-index: 3
+  padding: 0 5.5em
+  position: relative
+  overflow: hidden
+  margin-bottom: 5em
+  .title
+    h3
+      color: #fff
+      font-size: 1.5em
+      font-family: 'Qanelas'
+      font-weight: 700
+      border-left: 1px solid #bf7726
+      padding-left: 0.5em
+  .slider-button
+    position: absolute
+    bottom: 35%
+    z-index: 4
+    right: 3%
+    border: 0
+    background: none
+    cursor: pointer
+    img
+      animation: pulse_animation2 1.3s infinite
+      border-radius: 50%
+  .our-team-slider
+    padding-top: 3em
+    .our-team-item
+      display: flex
+      .leftside
+        width: 40%
+        min-height: 28em
+        border: 2em solid #c9c8ca
+        background: #fff
+        margin-right: 0.15em
+        border-top-left-radius: 15px
+        border-bottom-left-radius: 15px
+        position: relative
+        img
+          width: 100%
+          position: absolute
+          bottom: 0
+          left: 0
+      .rightside
+        width: 60%
+        margin-left: 0.15em
+        border-top-right-radius: 15px
+        border-bottom-right-radius: 15px
+        background: #ededed
+        padding: 3em 2em
+        .member-position
+          font-family: 'Qanelas'
+          font-weight: 700
+          font-size: 1.5em
+        .member-name
+          font-family: 'Qanelas'
+          font-weight: 400
+          font-size: 2em
+          margin-top: 0.75em
+        .member-qualification
+          padding: 2em 0
+          li
+            font-family: 'Qanelas'
+            font-weight: 400
+            color: #4c4a53
+            line-height: 1.2em
+        .member-contacts
+          border-top: 1px solid #939393
+          padding-top: 1.5em
+          p
+            font-family: 'Qanelas'
+            font-weight: 400
+            color: #26252a
+            font-size: 1.1em
+          .member-social
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            padding-top: 1.4em
+            a
+              display: block
+              margin-right: 1em
+              img
+                width: 80%
+                &:hover
+                  transition: .3s ease-in-out
+                  transform: rotate(360deg)
+
+@keyframes pulse_animation2
+  0%
+    box-shadow: 0 0 0 0 rgba(226, 137, 37, 0.9)
+  100%
+    box-shadow: 0 0 0 20px rgba(226, 137, 37, 0)
+
+.mfp-content-custom
+  .mfp-close
+    color: #fff
+    font-family: none
+    font-size: 54px
+
+.services-popup-block
+  width: 100%
+  padding: 20px
+  display: flex
+  justify-content: space-between
+  font-family: 'Qanelas'
+  .services-popup-item
+    background-color: #e7e7e7
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75)
+    margin-right: 20px
+    border-radius: 20px
+    padding: 25px
+    width: 33.3%
+    height: 100%
+    h3
+      font-size: 24px
+      font-weight: 700
+      margin-bottom: 25px
+    .services-popup-item-list
+      margin-top: 20px
+
+    h5
+      font-size: 18px
+      font-weight: 600
+      margin-bottom: 15px
+    ul
+      padding-left: 25px
+      li
+        font-size: 16px
+        margin-bottom: 10px
+        list-style-type: disc
+    .services-popup-item-paragraph
+      p
+        line-height: 20px
+      span
+        display: block
+        margin-top: 30px
+        font-weight: 500
+        text-align: center
+
+  .services-popup-image-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    text-align: center
+    border-top: 1px solid rgba(#000, .3)
+    margin-top: 20px
+    .services-popup-image
+      margin-top: 35px
+      width: 50%
+      img
+        width: 100px
+      h6
+        font-weight: 700
+        margin-bottom: 10px
+      &:last-child
+        width: 100%
+
+.our-services-projects
+  position: relative
+  z-index: 2
+  min-height: 55em
+  background: #eeeeee
+  overflow: hidden
+  .stripes-wrapper
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 1
+    .stripes
+      max-width: 1140px !important
+      margin: 0 auto
+      width: 100%
+      display: flex
+      justify-content: space-between
+      .stripes-item
+        display: block
+        min-height: 115em
+        width: 1px
+        background: #fff
+        &:first-child
+          background: #f2f2f2
+  .our-services-wrapper
+    position: relative
+    z-index: 3
+    padding: 5em 0
+    .title
+      text-align: center
+      h3
+        display: inline-block
+        font-family: 'Qanelas'
+        text-align: center
+        font-weight: 400
+        font-size: 2em
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          left: -0.85em
+          top: 10px
+          height: 20px
+          width: 3px
+          background: #4a494d
+    .services-wrapper
+      padding: 0 5.5em
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding-top: 3em
+      .services-item
+        width: 49%
+        border-radius: 15px
+        background: #e7e7e7
+        -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75)
+        -moz-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75)
+        box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75)
+        padding-top: 1.5em
+        padding-bottom: 2em
+        h3
+          font-family: 'Qanelas'
+          font-weight: 700
+          font-size: 1.5em
+          padding: 0 1.5em
+        p
+          font-family: 'Qanelas'
+          font-weight: 400
+          font-size: 1.2em
+          line-height: 1.2em
+          padding: 0 3em
+          color: #595959
+          margin-top: 1.5em
+        .services-img-button
+          text-align: center
+          .services-img
+            width: 100%
+            padding: 3em 0
+          .services-button-popup-link
+            width: 100%
+          .services-button
+            max-width: 16em
+            width: 100%
+            padding: 10px 0
+            font-family: 'Qanelas'
+            font-size: 0.6em
+            letter-spacing: 2px
+            font-weight: 700
+            min-height: 44px
+            max-height: 45px
+            border-radius: 30px
+            border: 0
+            box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.21)
+            background: #f59324
+            color: #fff
+            cursor: pointer
+            margin: 1.8em auto
+            text-decoration: none
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &:hover
+              color: #f59324
+              background: #fff
+        &:nth-child(1)
+          height: 100%
+          .services-img-button
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            padding-top: 3em
+            .services-img
+              width: 100%
+              max-width: 21em
+              padding: 0
+              img
+                width: 100%
+            .services-button
+              max-width: 16em
+              width: 100%
+              padding: 10px 0
+              font-family: 'Qanelas'
+              font-size: 0.6em
+              letter-spacing: 2px
+              font-weight: 700
+              max-height: 45px
+              border-radius: 30px
+              border: 0
+              box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.21)
+              background: #f59324
+              color: #fff
+              cursor: pointer
+              margin: 1.8em auto
+              &:hover
+                color: #f59324
+                background: #fff
+        &:nth-child(3)
+          margin-top: -17.5em
+        &:nth-child(4)
+          margin-top: 1.5em
+    .services-bottom-content
+      padding-top: 3em
+      padding-left: 12em
+      padding-right: 12em
+      text-align: center
+      p
+        text-align: center
+        font-family: 'Qanelas'
+        font-weight: 300
+        font-style: italic
+        line-height: 1.2em
+        font-size: 1.2em
+        color: #595959
+        span
+          font-weight: 500
+          font-style: normal
+      .all-serv-btn
+        margin-top: 2em
+        font-size: 1.125em
+        font-family: 'Qanelas'
+        font-weight: 700
+        letter-spacing: 3px
+        color: #fff
+        border: 0
+        padding: 12px 0
+        padding-bottom: 14px
+        max-width: 23em
+        width: 100%
+        border-radius: 10px
+        background: #26252a
+        border: 1px solid #5d5c60
+        cursor: pointer
+        span
+          margin-left: 2.5em
+          img
+            width: 1.8%
+            &:last-child
+              display: none
+        &:hover
+          background: #fff
+          color: #26252a
+          span
+            img
+              &:first-child
+                display: none !important
+              &:last-child
+                display: inline-block
+
+  .our-projects-wrapper
+    position: relative
+    z-index: 3
+    padding-top: 3em
+    padding-bottom: 5em
+    .title
+      text-align: center
+      min-height: 32px
+      position: relative
+      h3
+        display: inline-block
+        font-family: 'Qanelas'
+        text-align: center
+        font-weight: 400
+        font-size: 2em
+        top: 0
+        position: absolute
+        right: 25.7%
+        &::before
+          content: ''
+          position: absolute
+          left: -0.85em
+          top: 10px
+          height: 20px
+          width: 3px
+          background: #4a494d
+    .projects-slider
+      margin-top: 5em
+      .owl-dots
+        display: flex
+        margin-top: 1em
+        justify-content: center
+        .owl-dot
+          display: block
+        .active
+          span
+            background: #f59324
+      .project-item
+        min-height: 25em
+        display: flex
+        .leftside
+          width: 60%
+          img
+            width: auto !important
+        .rightside
+          width: 40%
+          background: #26252a
+          padding: 2.5em 2em
+          position: relative
+          h4
+            color: #fff
+            font-family: 'Qanelas'
+            font-weight: 700
+            font-size: 1.3em
+          hr
+            max-width: 19em
+            background: #fff
+            text-align: left
+            margin: 2.5em 0 0 0
+            background: #939393
+          h5
+            color: #fff
+            font-family: 'Qanelas'
+            font-weight: 500
+            font-size: 1.3em
+            margin-top: 2.5em
+          p
+            color: #fff
+            font-family: 'Qanelas'
+            font-weight: 400
+            font-size: 1.3em
+            margin-top: 1.6em
+    .slider-nav
+      position: absolute
+      bottom: 12em
+      right: 2.5em
+      z-index: 2
+      li
+        margin: 3em 0
+        cursor: pointer
+        img
+          width: auto
+          border-radius: 50%
+        &:first-child
+          img
+            animation: pulse_animation3 1.3s infinite
+        &:last-child
+          img
+            animation: pulse_animation4 1.3s infinite
+
+@keyframes pulse_animation3
+  0%
+    box-shadow: 0 0 0 0 rgba(226, 137, 37, 0.9)
+  100%
+    box-shadow: 0 0 0 10px rgba(226, 137, 37, 0)
+
+@keyframes pulse_animation4
+  0%
+    box-shadow: 0 0 0 0 rgba(152, 151, 152, 0.9)
+  100%
+    box-shadow: 0 0 0 10px rgba(152, 151, 152, 0)
+
+
+.our-partners-wrapper
+  position: relative
+  z-index: 3
+  padding-top: 3em
+  padding-bottom: 5em
+  padding-left: 5.5em
+  padding-right: 5.5em
+  .title
+    text-align: right
+    h3
+      display: inline-block
+      font-family: 'Qanelas'
+      text-align: center
+      font-weight: 400
+      position: relative
+      font-size: 2em
+      &::before
+        content: ''
+        position: absolute
+        left: -0.85em
+        top: 10px
+        height: 20px
+        width: 3px
+        background: #4a494d
+    h4
+      font-family: 'Qanelas'
+      text-align: left
+      font-weight: 700
+      font-size: 2.15em
+      margin-top: 2em
+  .partners
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding-top: 3em
+    .partner-item
+      max-width: 25%
+      width: 100%
+      text-align: center
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin: 2em 0
+      img
+        width: 50%
+        margin: 0 auto
+
+.contacts-wrapper
+  min-height: 40em
+  background: #000
+  border-radius: 50% 50% 0px 0px /20% 60% 0px 0px
+  background: #232227
+  .contacts
+    padding: 0 5.5em
+    .title
+      text-align: right
+      h3
+        display: inline-block
+        font-family: 'Qanelas'
+        font-weight: 400
+        position: relative
+        font-size: 2em
+        padding-right: 0.75em
+        &::before
+          content: ''
+          position: absolute
+          right: 0
+          top: 10px
+          height: 20px
+          width: 3px
+          background: #4a494d
+    .contacts-row
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      padding-top: 8em
+      .leftside
+        width: 60%
+        h3
+          color: #eeeeee
+          font-family: 'Qanelas'
+          font-weight: 400
+          font-size: 1.3em
+          text-transform: uppercase
+        hr
+          margin: 0
+          max-width: 30em
+          background: #fff
+          margin-top: 2em
+          margin-bottom: 2em
+        .contact-item
+          padding: 0.5em 0
+          h4
+            font-family: 'Qanelas'
+            font-weight: 700
+            color: #fff
+            font-size: 1.6em
+          a
+            color: #fff
+            font-family: 'Qanelas'
+            font-weight: 300
+            font-size: 1.6em
+            display: block
+            margin-top: 5px
+        .social
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          padding-top: 1em
+          li
+            img
+              width: 80%
+              &:hover
+                transition: .3s ease-in-out
+                transform: rotate(360deg)
+      .rightside
+        width: 40%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        .circle-map
+          min-height: 24em
+          max-height: 24em
+          border: 10px solid #636363
+          border-radius: 50%
+          overflow: hidden
+          max-width: 24em
+          min-width: 24em
+          margin: 0 auto
+
+.footer
+  padding: 1em 0
+  background: #000
+  .footer-row
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    padding: 0 5.5em
+    p
+      color: #f4f2f2
+      font-family: 'Qanelas'
+      font-weight: 400
+      font-size: 1.2em
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      justify-content: center
+    .developoed-by
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      p
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding-right: 1.5em
+      a
+        display: block
+
+.request-btn-wrap
+  position: fixed
+  right: 1em
+  bottom: 1em
+  border: 1px solid #fff
+  border-radius: 50%
+  overflow: hidden
+  padding: 15px
+  z-index: 99
+  .request-tel-btn
+    background: none
+    border: 0
+    border-radius: 50%
+    padding: 0
+    cursor: pointer
+    img
+      width: 100%
+      border-radius: 50%
+      margin-bottom: -5px
+      animation: pulse_animation 1.3s infinite
+
+@keyframes pulse_animation
+  0%
+    box-shadow: 0 0 0 0 rgba(226, 137, 37, 0.9)
+  100%
+    box-shadow: 0 0 0 20px rgba(226, 137, 37, 0)
+
+
+.modal-dialog
+  margin: 8em auto
+  .modal-content
+    background: #232227
+    border: 5px solid #fff
+    border-radius: 15px
+    .modal-header
+      border-bottom: 0
+      .close
+        color: #fff
+    .modal-body
+      padding: 1em 2em
+      text-align: center
+      .input-form
+        margin-bottom: 1.5em
+        text-align: left
+        p
+          font-family: 'Qanelas'
+          font-weight: 400
+          font-size: 1.2em
+          color: #fff
+          margin-bottom: 8px
+        input
+          width: 100%
+          font-family: 'Qanelas'
+          font-weight: 400
+          font-size: 1.2em
+          color: #fff
+          background: none
+          padding: 14px
+          border-radius: 10px
+      .btn-send
+        max-width: 12em
+        width: 100%
+        padding: 15px 0
+        padding-bottom: 14px
+        font-family: 'Qanelas'
+        font-weight: 700
+        font-size: 1.12em
+        border: 2px solid #8ed83e
+        background: #8ed83e
+        border-radius: 12px
+        color: #fff
+        text-transform: uppercase
+        cursor: pointer
+        margin-bottom: 0.5em
+        &:hover
+          transition: .3s ease-in-out
+          background: none
