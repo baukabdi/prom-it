@@ -42,7 +42,13 @@
     border-bottom-left-radius: 15px;
     margin-left: 0; }
   .our-services-projects .our-services-wrapper .services-wrapper .services-item .services-img-button .services-img img {
-    width: 100%; } }
+    width: 100%; }
+  .services-popup-block {
+    justify-content: space-around; }
+    .services-popup-block .services-popup-item {
+      max-width: 350px;
+      width: 100%;
+      margin-bottom: 25px; } }
 
 @media (max-width: 920px) {
   .header .header-container .header-middle .header-circle h3 {

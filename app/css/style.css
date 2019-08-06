@@ -12,6 +12,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
+w-50 {
+  width: 50% !important; }
+
 body {
   line-height: 1;
   background: #232227; }
@@ -624,16 +627,18 @@ input, button, textarea {
   width: 100%;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-family: 'Qanelas'; }
   .services-popup-block .services-popup-item {
     background-color: #e7e7e7;
     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
-    margin-right: 20px;
     border-radius: 20px;
     padding: 25px;
-    width: 33.3%;
-    height: 100%; }
+    width: 31.3%;
+    height: 100%;
+    margin-bottom: 25px;
+    margin-right: 20px; }
     .services-popup-block .services-popup-item h3 {
       font-size: 24px;
       font-weight: 700;
@@ -651,7 +656,8 @@ input, button, textarea {
         margin-bottom: 10px;
         list-style-type: disc; }
     .services-popup-block .services-popup-item .services-popup-item-paragraph p {
-      line-height: 20px; }
+      line-height: 20px;
+      margin-bottom: 10px; }
     .services-popup-block .services-popup-item .services-popup-item-paragraph span {
       display: block;
       margin-top: 30px;
@@ -674,6 +680,10 @@ input, button, textarea {
         margin-bottom: 10px; }
       .services-popup-block .services-popup-image-wrap .services-popup-image:last-child {
         width: 100%; }
+  .services-popup-block .telepresence-systems .services-popup-image-wrap .services-popup-image {
+    width: 95%; }
+    .services-popup-block .telepresence-systems .services-popup-image-wrap .services-popup-image img {
+      width: 100%; }
 
 .our-services-projects {
   position: relative;
