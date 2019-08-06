@@ -91,19 +91,34 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="index.html" method="post">
-              <div class="input-form">
-                <p>Имя</p>
-                <input type="text" name="firstname">
+            <form id="callback-form">
+
+              <div class="modal-body-form">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Site Name">
+                <input type="hidden" name="admin_email" value="baukabdi@yandex.ru">
+                <input type="hidden" name="email_from" value="info@baukabdi.ru">
+                <input type="hidden" name="form_subject" value="Новая заявка с сайта PROM IT">
+                <!-- END Hidden Required Fields -->
+
+                <div class="input-form">
+                  <p>Имя</p>
+                  <input type="text" name="Имя" required>
+                </div>
+
+                <div class="input-form">
+                  <p>Телефон</p>
+                  <input type="tel" name="Телефон" required>
+                </div>
+                <button id="callback-form-button" class="btn-send">
+                  отправить
+                </button>
               </div>
 
-              <div class="input-form">
-                <p>Телефон</p>
-                <input type="tel" name="tel-number">
+              <div class="modal-succes-form">
+                <p>Спасибо за обращение. Наш менеджер свяжется с вами в ближайшее время.</p>
               </div>
-              <button class="btn-send" type="button" name="button" data-toggle="modal" data-target="#exampleModal">
-                отправить
-              </button>
+
             </form>
           </div>
         </div>

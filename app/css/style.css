@@ -636,7 +636,6 @@ input, button, textarea {
     border-radius: 20px;
     padding: 25px;
     width: 31.3%;
-    height: 100%;
     margin-bottom: 25px;
     margin-right: 20px; }
     .services-popup-block .services-popup-item h3 {
@@ -1166,8 +1165,36 @@ input, button, textarea {
   100% {
     box-shadow: 0 0 0 20px rgba(226, 137, 37, 0); } }
 
+.modal-open .modal {
+  overflow-y: hidden; }
+
+#callback-form .modal-succes-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+  display: none; }
+  #callback-form .modal-succes-form p {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Qanelas';
+    line-height: 24px;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 1.5s ease; }
+
 .modal-dialog {
-  margin: 8em auto; }
+  margin-top: 0;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   .modal-dialog .modal-content {
     background: #232227;
     border: 5px solid #fff;
